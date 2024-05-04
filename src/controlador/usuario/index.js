@@ -1,7 +1,7 @@
 const { loginSchema } = require('../../schemas/login');
 const servicos = require('../../servicos');
-const { geraTokenJwt } = require('../../utils/geraTokenJwt.js');
-const mapeadorCodigoStatus = require('../../infra/http/codigoStatus/mapeadorCodigoStatus.js');
+const { geraTokenJwt } = require('../../utils/geraTokenJwt');
+const mapeadorCodigoStatus = require('../../infra/http/codigoStatus/mapeadorCodigoStatus');
 
 const login = async (req, res) => {
   const { email, senha } = req.body;
@@ -28,6 +28,18 @@ const login = async (req, res) => {
   }
 };
 
+const buscaDadosUsuario = async (req, res) => {
+  const { id } = res.locals.usuario;
+
+  try {
+    const detalhes = await servicos.datalhesUsuario(id);
+    res.json(detalhes);
+  } catch (error) {
+    res.status(mapeadorCodigoStatus.ErroInternoDoServidor).json({ message: error.message });
+  }
+};
+
 module.exports = {
   login,
+  buscaDadosUsuario,
 };

@@ -1,5 +1,8 @@
 1 - base servidor - OK
-2 - gerenciar B Token  - Ok
+2 - gerenciar B Token
+  2.1 - login - ok
+  2.2 - recuperar usuario - ok
+  2.3 - criar usuario -
 3 - integrar iugu
     3.1 - login com b token usando dotenv
     3.2 - consultar clientes
