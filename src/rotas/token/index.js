@@ -7,7 +7,7 @@ const rotasToken = express.Router();
 
 rotasToken.get('/', verificaToken, controladorUsuario.buscaDadosUsuario);
 
-// rotasToken.post('/', controladorUsuario.criar);
+rotasToken.post('/', controladorUsuario.cadastroUsuario);
 rotasToken.post('/login', controladorUsuario.login);
 
 module.exports = { rotasToken };

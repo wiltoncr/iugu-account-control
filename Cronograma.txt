@@ -2,7 +2,7 @@
 2 - gerenciar B Token
   2.1 - login - ok
   2.2 - recuperar usuario - ok
-  2.3 - criar usuario -
+  2.3 - criar usuario - ok
 3 - integrar iugu
     3.1 - login com b token usando dotenv
     3.2 - consultar clientes

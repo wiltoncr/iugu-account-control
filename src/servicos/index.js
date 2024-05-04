@@ -1,7 +1,7 @@
 const { CriptografaSenha, ComparaSenha } = require('../provedores');
 const { RepositorioUsuario } = require('../repositorios');
 
-const { buscaUsuarioPorEmail, buscaUsuarioPorId } = new RepositorioUsuario();
+const { buscaUsuarioPorEmail, buscaUsuarioPorId, cadastroUsuario } = new RepositorioUsuario();
 
 const login = async (email, senha) => {
   const [usuario] = await buscaUsuarioPorEmail(email);
@@ -31,7 +31,26 @@ const datalhesUsuario = async (id) => {
   return usuarioPublico;
 };
 
+const criaUsuario = async (nome, email, senha) => {
+  const usuarioJaExiste = await buscaUsuarioPorEmail(email);
+
+  if (usuarioJaExiste.length > 0) {
+    throw new Error('Email já cadastrado.');
+  }
+
+  const hash = await CriptografaSenha(senha);
+
+  const novoUsuario = {
+    nome,
+    email,
+    senha: hash,
+  };
+
+  await cadastroUsuario(novoUsuario);
+};
+
 module.exports = {
   login,
   datalhesUsuario,
+  criaUsuario,
 };
