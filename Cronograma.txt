@@ -1,0 +1,8 @@
+1 - base servidor - OK
+2 - gerenciar B Token  - Ok
+3 - integrar iugu
+    3.1 - login com b token usando dotenv
+    3.2 - consultar clientes
+    3.3 - consultar boletos
+4 - retornar boletos
+.... calma moreno !!! vc não era assim!!
