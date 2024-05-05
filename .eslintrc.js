@@ -19,13 +19,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  plugins: ['prettier'],
   rules: {
+    'prettier/prettier': 'error',
     'no-console': 'off',
     'class-methods-use-this': 'off',
-    "import/extensions": ["error", "ignorePackages", {
-      "js": "never",
-      "jsx": "never",
-      "mjs": "never"
-    }]
+    camelcase: 'off',
   },
 };

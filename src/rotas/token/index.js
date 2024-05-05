@@ -1,5 +1,5 @@
 const express = require('express');
-const controladorUsuario = require('../../controlador/usuario');
+const controladorUsuario = require('../../controladores/usuario');
 
 const { verificaToken } = require('../../intermediarios/autenticacao');
 
