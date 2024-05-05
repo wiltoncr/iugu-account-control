@@ -1,11 +1,12 @@
-1 - base servidor - OK
-2 - gerenciar B Token
-  2.1 - login - ok
-  2.2 - recuperar usuario - ok
-  2.3 - criar usuario - ok
-3 - integrar iugu
-    3.1 - login com b token usando dotenv
-    3.2 - consultar clientes
-    3.3 - consultar boletos
-4 - retornar boletos
-.... calma moreno !!! vc não era assim!!
+1. Base do Servidor - Concluído
+2.Gerenciar B Token
+  2.1 Login - Concluído
+  2.2 Recuperar Usuário - Concluído
+  2.3 Criar Usuário - Concluído
+3. Integrar com Iugu
+  3.1 Login com B Token usando dotenv - Concluído
+  3.2 Consultar Clientes - Concluído
+  3.3 Consultar Boletos - Concluído
+Retornar Boletos - Concluído
+
+.... rapaz o moreno tá ignorante !!! tenha calma moreno!!
