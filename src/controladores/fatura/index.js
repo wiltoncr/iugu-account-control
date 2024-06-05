@@ -5,7 +5,7 @@ const {
 
 const listagemFatura = async (req, res) => {
   try {
-    const listagemCompleta = await servicos.listaFaturas();
+    const listagemCompleta = await servicos.listaFaturas({ ...req.query });
     res.json(listagemCompleta);
   } catch (error) {
     res.status(ErroInternoDoServidor).json({ mensagem: error.message });

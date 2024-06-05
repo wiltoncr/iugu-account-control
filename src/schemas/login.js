@@ -1,4 +1,7 @@
 const yup = require('yup');
+const { pt } = require('yup-locales');
+
+yup.setLocale(pt);
 
 const loginSchema = yup.object().shape({
   email: yup.string().email().required('O email é um campo obrigatório'),

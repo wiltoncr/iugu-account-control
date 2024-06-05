@@ -2,8 +2,8 @@ const { RepositorioFaturas } = require('../../repositorios');
 
 const { listarFaturas } = new RepositorioFaturas();
 
-const listaFaturas = async () => {
-  const faturas = await listarFaturas();
+const listaFaturas = async (payload) => {
+  const faturas = await listarFaturas(payload);
 
   return faturas;
 };

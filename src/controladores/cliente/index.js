@@ -1,3 +1,4 @@
+const { clienteSchema } = require('../../schemas/cliente');
 const servicos = require('../../servicos');
 const {
   ErroInternoDoServidor,
@@ -5,7 +6,11 @@ const {
 
 const listagemCliente = async (req, res) => {
   try {
-    const listagemCompleta = await servicos.listaClientes();
+    await clienteSchema.validate(req.query);
+    const listagemCompleta = await servicos.listaClientes({
+      start: req.query.start,
+      limit: req.query.limit,
+    });
     res.json(listagemCompleta);
   } catch (error) {
     res.status(ErroInternoDoServidor).json({ mensagem: error.message });

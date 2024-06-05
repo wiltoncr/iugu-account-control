@@ -2,8 +2,8 @@ const { RepositorioClientes } = require('../../repositorios');
 
 const { listarClientes } = new RepositorioClientes();
 
-const listaClientes = async () => {
-  const clientes = await listarClientes();
+const listaClientes = async (payload) => {
+  const clientes = await listarClientes(payload);
 
   return clientes;
 };

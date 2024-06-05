@@ -1,10 +1,11 @@
 const axiosIugu = require('../../infra/iugu/conexao');
 
 class RepositorioCliente {
-  async listarClientes() {
+  async listarClientes(payload) {
     const clientes = await axiosIugu.get('/customers', {
       params: {
-        limit: 10,
+        start: payload.start,
+        limit: payload.limit,
       },
     });
 
