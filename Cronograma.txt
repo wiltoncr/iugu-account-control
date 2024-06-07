@@ -1,3 +1,10 @@
-1 - ler documentação
-2 - teste de envio de msg texto personalizada
-3 - se disponivél o teste de envio de doc  personalizado
+1 - deixar consulta API funcionando
+  1.1 - Cliente
+    1 - listar OK
+    2 - filtrar por limit e start OK
+
+  1.2 - Faturas
+    1 - listar OK
+    2 - filtrar por limit e start OK
+    3 - filtar por idCliente
+    

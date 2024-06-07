@@ -4,7 +4,6 @@ class RepositorioFatura {
   async listarFaturas(payload) {
     const faturas = await axiosIugu.get('/invoices', {
       params: {
-        limit: 10,
         ...payload,
       },
     });
